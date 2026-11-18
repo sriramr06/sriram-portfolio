@@ -108,7 +108,7 @@ export const projects = [
     status: "Completed",
     featured: false,
     links: {
-      repo: "https://github.com/sriramr06/charadex",
+      repo: "https://github.com/sriramr06/charadex-anime",
     },
     stack: {
       frontend: ["React 19", "Vite", "React Router", "axios", "react-icons", "CSS"],
