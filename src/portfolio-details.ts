@@ -6,7 +6,12 @@ export const personalDetails = {
   mobile: "+91 6374752936",
   github: "https://github.com/sriramr06",
   linkedin: "https://linkedin.com/in/sriram-r-sriram",
-aboutme: "I'm a Full Stack Developer with a growing interest in backend engineering. I enjoy turning ideas into working applications and exploring how systems manage data, maintain security, and handle increasing complexity. What drew me into programming was the idea of turning something I imagined into something that actually works. While I enjoy full-stack development, I'm particularly drawn to the backend—understanding how data flows through an application, how it's protected, and how systems evolve as complexity increases. I'm continuously exploring backend architecture, system design, and the engineering decisions that make applications reliable and maintainable. "
+  aboutme:
+    "I'm a full-stack developer who builds web applications with React, TypeScript, Node.js and MongoDB. " +
+    "I work across the whole product, from requirements and database design to testing and deployment. " +
+    "My main interest is the backend: how data is modelled and moves through a system, how access is secured, and how an application stays maintainable as it grows. " +
+    "I applied this in Nexora, a multi-tenant SaaS with enforced tenant isolation and an automated test suite that runs in CI. " +
+    "I'm currently deepening my understanding of backend architecture and system design.",
 } as const;
 
 export const skills = [
@@ -73,7 +78,7 @@ export const projects = [
       "444 automated tests: 441 unit and integration tests plus 3 Playwright end-to-end journeys, run in CI on every pull request",
       "Validation shared between client and server through Zod schemas, which also generate OpenAPI docs for 74 API operations",
       "Notifications written in the same MongoDB transaction as the change, so they never go out of sync",
-      "Keyset pagination; a 200-task board loads from the API in 17 ms",
+      "Keyset pagination; a 200-task board loads from the API",
       "Production deploys only after CI and the end-to-end tests pass",
     ],
     images: {
@@ -99,7 +104,7 @@ export const projects = [
       "artwork, personality, abilities with named techniques, backstory and tags. Creators can explore each other's " +
       "characters by search, tag and sort order, and connect through likes, comments and follows.",
     role: "Solo: requirements, database design, backend, frontend and documentation",
-    period: "Nov 2026",
+    period: "July 2026",
     status: "Completed",
     featured: false,
     links: {
