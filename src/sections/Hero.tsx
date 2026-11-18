@@ -13,7 +13,6 @@ const stats = [
   { value: "444", label: "Automated tests in CI" },
   { value: "74", label: "Documented API operations" },
   { value: "46", label: "Endpoints isolation-tested" },
-  { value: "17 ms", label: "200-task board load" },
 ];
 
 export default function Hero() {
@@ -40,15 +39,14 @@ export default function Hero() {
               id="hero-title"
               className="mt-8 max-w-[18ch] text-[2.1rem] leading-[1.1] font-semibold tracking-[-0.035em] sm:text-[2.75rem] xl:text-5xl"
             >
-              Hi, I'm {personalDetails.name.split(" ")[0]}. I build full-stack apps with a soft spot for the
-              backend.
+              Full-stack developer focused on reliable, well-tested backends.
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-[17px]">
-              React and TypeScript on the front; Node.js, Express and MongoDB behind it. I care about how
-              data flows through a system, how it's protected, and how it's tested before it ships.
+              I build web applications with React and TypeScript on the frontend and Node.js, Express and
+              MongoDB on the backend, with a focus on data integrity, security and automated testing.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-2.5">
+            <div className="mt-8 mb-10 flex flex-wrap items-center gap-2.5">
               <ButtonAnchor href="#work" variant="primary">
                 View my work <ArrowRight size={16} />
               </ButtonAnchor>
@@ -57,7 +55,7 @@ export default function Hero() {
               </ButtonAnchor>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-6 text-[13.5px] text-muted lg:mt-auto">
+            <div className="mt-auto flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-6 text-[13.5px] text-muted">
               <SocialLink href={personalDetails.github} icon={<GithubIcon size={16} />}>
                 GitHub
               </SocialLink>
@@ -103,11 +101,11 @@ export default function Hero() {
           </Link>
 
           {/* Stats */}
-          <dl className="grid grid-cols-2 gap-4 lg:col-span-5">
+          <dl className="grid grid-cols-3 gap-3 sm:gap-4 lg:col-span-5">
             {stats.map((s) => (
-              <div key={s.label} className="card flex flex-col justify-between gap-3 p-5">
+              <div key={s.label} className="card flex flex-col justify-between gap-3 p-4 sm:p-5">
                 <dt className="order-2 text-[13px] leading-snug text-muted">{s.label}</dt>
-                <dd className="order-1 text-[1.75rem] leading-none font-semibold tracking-[-0.03em] tabular-nums">
+                <dd className="order-1 text-2xl leading-none sm:text-[1.75rem] font-semibold tracking-[-0.03em] tabular-nums">
                   {s.value}
                 </dd>
               </div>

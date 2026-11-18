@@ -28,7 +28,7 @@ export default function About() {
   return (
     <section id="about" aria-label="About" className="pt-20 lg:pt-28">
       <Container>
-        <SectionHeader index="01" label="About" title="A developer who likes knowing how things work underneath." />
+        <SectionHeader index="01" label="About" title="Building applications from the data layer up." />
 
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
           <div className="card p-6 sm:p-8 lg:col-span-7">
