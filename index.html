@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sriram R — Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Sriram R is a full-stack developer in Chennai, India, building web applications with React, TypeScript, Node.js and MongoDB."
+    />
+    <meta name="author" content="Sriram R" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sriram R — Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack developer building web applications with React, TypeScript, Node.js and MongoDB."
+    />
+    <meta name="theme-color" content="#111111" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        document.querySelector('meta[name="theme-color"]').content = t === 'light' ? '#F6F5F1' : '#111111';
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

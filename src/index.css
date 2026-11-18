@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Design tokens — warm neutrals with one muted accent. */
+:root {
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --subtle: #efeee9;
+  --line: #e3e1d9;
+  --line-strong: #cfccc2;
+  --fg: #161615;
+  --muted: #5c5a55;
+  --faint: #8a877f;
+  --accent: #2f5d50;
+  --accent-soft: #e4ece7;
+  --frame: #eceae4;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #111111;
+  --surface: #181817;
+  --subtle: #1f1f1d;
+  --line: #2a2927;
+  --line-strong: #3a3936;
+  --fg: #ecebe6;
+  --muted: #a3a099;
+  --faint: #74716b;
+  --accent: #93b5a5;
+  --accent-soft: #1f2a25;
+  --frame: #232321;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-subtle: var(--subtle);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-frame: var(--frame);
+
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Grid-paper backdrop for screenshot panels. */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: -1px -1px;
+}
+
+@utility card {
+  border: 1px solid var(--line);
+  background-color: var(--surface);
+  border-radius: 1rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
