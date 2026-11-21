@@ -45,7 +45,7 @@ export const projects = [
       "Every organization's data is isolated, each role sees only what it should, and tasks move through a " +
       "review workflow where managers approve or request changes. A platform Owner approves new organizations before they go live.",
     role: "Solo: requirements, design, backend, frontend, testing and deployment",
-    period: "Nov 2026",
+    period: "Oct 2026 - Nov 2026",
     status: "Live",
     featured: true,
     links: {
@@ -104,7 +104,7 @@ export const projects = [
       "artwork, personality, abilities with named techniques, backstory and tags. Creators can explore each other's " +
       "characters by search, tag and sort order, and connect through likes, comments and follows.",
     role: "Solo: requirements, database design, backend, frontend and documentation",
-    period: "July 2026",
+    period: "May 2026",
     status: "Completed",
     featured: false,
     links: {
